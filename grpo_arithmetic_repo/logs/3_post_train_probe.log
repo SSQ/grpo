@@ -1,0 +1,49 @@
+PS grpo_arithmetic> python src/probe_baseline.py --model outputs/grpo_ckpt --out outputs/post_train_probe.json --seed 42
+Loading weights: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 290/290 [00:00<00:00, 669.41it/s]
+The following generation flags are not valid and may be ignored: ['top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+L1_add_1digit        greedy_loose=1.00 fmt=0.96 loose_acc=0.99 loose_pass@8=1.00 loose_informative=0.08 (10.1s)
+L2_addsub_2digit     greedy_loose=0.98 fmt=1.00 loose_acc=0.94 loose_pass@8=1.00 loose_informative=0.24 (12.6s)
+L3_addsub_3digit     greedy_loose=0.88 fmt=0.96 loose_acc=0.81 loose_pass@8=0.98 loose_informative=0.60 (12.4s)
+L4_mul_1digit        greedy_loose=1.00 fmt=0.84 loose_acc=0.98 loose_pass@8=1.00 loose_informative=0.12 (9.3s)
+L5_mul_2x1digit      greedy_loose=0.88 fmt=0.98 loose_acc=0.82 loose_pass@8=0.94 loose_informative=0.46 (12.1s)
+L6_mul_2x2digit      greedy_loose=0.22 fmt=0.98 loose_acc=0.20 loose_pass@8=0.42 loose_informative=0.32 (12.6s)
+
+结果已保存：outputs\post_train_probe.json
+GPU 峰值显存：1.49 GB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PS grpo_arithmetic> python src/probe_baseline.py --model outputs/grpo_lora_ckpt --out outputs/post_train_probe_lora.json --seed 42
+Loading weights: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 290/290 [00:00<00:00, 669.70it/s]
+The following generation flags are not valid and may be ignored: ['top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+L1_add_1digit        greedy_loose=1.00 fmt=1.00 loose_acc=1.00 loose_pass@8=1.00 loose_informative=0.00 (10.9s)
+L2_addsub_2digit     greedy_loose=1.00 fmt=1.00 loose_acc=0.98 loose_pass@8=1.00 loose_informative=0.06 (11.6s)
+L3_addsub_3digit     greedy_loose=0.90 fmt=1.00 loose_acc=0.88 loose_pass@8=0.96 loose_informative=0.20 (12.3s)
+L4_mul_1digit        greedy_loose=1.00 fmt=1.00 loose_acc=1.00 loose_pass@8=1.00 loose_informative=0.02 (12.7s)
+L5_mul_2x1digit      greedy_loose=0.96 fmt=1.00 loose_acc=0.93 loose_pass@8=0.98 loose_informative=0.22 (11.7s)
+L6_mul_2x2digit      greedy_loose=0.24 fmt=1.00 loose_acc=0.25 loose_pass@8=0.38 loose_informative=0.22 (12.7s)
+
+结果已保存：outputs\post_train_probe_lora.json
+GPU 峰值显存：1.49 GB

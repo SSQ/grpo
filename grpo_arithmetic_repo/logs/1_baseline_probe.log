@@ -1,0 +1,21 @@
+
+
+
+
+python "grpo_arithmetic\src\probe_baseline.py" 
+Loading weights: 100%|██████████| 290/290 [00:01<00:00, 186.96it/s]
+The following generation flags are not valid and may be ignored: ['top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+L1_add_1digit        greedy_loose=0.98 fmt=0.00 loose_acc=0.85 loose_pass@8=1.00 loose_informative=0.50 (8.5s)
+L2_addsub_2digit     greedy_loose=0.76 fmt=0.02 loose_acc=0.65 loose_pass@8=0.90 loose_informative=0.70 (9.5s)
+L3_addsub_3digit     greedy_loose=0.42 fmt=0.06 loose_acc=0.37 loose_pass@8=0.84 loose_informative=0.80 (18.2s)
+L4_mul_1digit        greedy_loose=0.62 fmt=0.00 loose_acc=0.60 loose_pass@8=0.96 loose_informative=0.68 (9.4s)
+L5_mul_2x1digit      greedy_loose=0.20 fmt=0.00 loose_acc=0.22 loose_pass@8=0.62 loose_informative=0.62 (11.6s)
+L6_mul_2x2digit      greedy_loose=0.08 fmt=0.08 loose_acc=0.04 loose_pass@8=0.18 loose_informative=0.18 (12.1s)
+
+结果已保存：grpo_arithmetic\outputs\baseline_probe.json
+GPU 峰值显存：1.54 GB
+
+Process finished with exit code 0
+
+
+
